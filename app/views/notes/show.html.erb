@@ -1,0 +1,15 @@
+<%= link_to("<< Back to List", notes_path, :class => 'back-link') %>
+
+<div class="notes show">
+
+    <div class="title show">
+      <h2><%= @note.title %></h2>
+    </div>
+    <div class="date show">
+      Created at <%= @note.created_at %>
+    </div>
+    <div class="content show">
+      <%= @note.content %>
+    </div>
+
+</div>

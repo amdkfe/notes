@@ -1,0 +1,28 @@
+<%= link_to("<< Back to List", notes_path, :class => 'back-link') %>
+
+<div class="notes new">
+  <h2>Create Note</h2>
+
+  <%= form_for(@note) do |f| %>
+
+    <table summary="Note form fields">
+      <tr>
+        <th>Title</th>
+        <td><%= f.text_field(:title) %></td>
+      </tr>
+      <!-- <tr>
+        <th>Position</th>
+        <td><%= f.text_field(:position) %></td>
+      </tr> -->
+      <tr>
+        <th>Content</th>
+        <td><%= f.text_area :content %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= f.submit("Create Note") %>
+    </div>
+
+  <% end %>
+</div>
